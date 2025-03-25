@@ -1,0 +1,32 @@
+Performance:
+Process facial images within 2-5 seconds.
+Generate music clips within 10-15 seconds.
+Fetch API recommendations within 5 seconds (with retry mechanism for failures).
+
+Scalability:
+Support single-user local execution (scalable to cloud with Google Cloud Platform integration).
+
+Reliability:
+Handle API failures gracefully with fallbacks (e.g., static song lists, simple tones).
+Recover from model loading errors with a fallback CNN model.
+
+Usability:
+Provide an intuitive, visually appealing UI with animations and particle effects.
+Ensure clear feedback (e.g., spinners, success/error messages).
+
+Security:
+Process all sensitive data (images, biometrics, text) locally.
+Avoid storing user data beyond session state.
+Secure API keys via environment variables (not hardcoded).
+
+Maintainability:
+Modular code structure (though currently a single file).
+Clear documentation in README.md.
+
+Portability:
+Run on Windows, macOS, and Linux with Python 3.8+.
+
+Compatibility:
+Support modern web browsers for Streamlit UI.
+Work with standard webcam hardware.
+
