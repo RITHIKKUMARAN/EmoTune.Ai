@@ -1,0 +1,17 @@
+Hardware/Software Prerequisites
+These are the minimum requirements to run the application.
+
+Hardware:
+
+CPU: Multi-core processor (e.g., Intel i5 or equivalent) for model inference.
+RAM: At least 8 GB (16 GB recommended) for running deep learning models and music generation.
+Storage: 5-10 GB free space (for dependencies, models, and generated files).
+Webcam: Optional, for live facial analysis.
+Smartwatch: Optional, for real biometric data (currently mocked).
+
+Software:
+
+Operating System: Windows 10/11, macOS 10.15+, or Ubuntu 20.04+.
+Python: Version 3.8 or higher (TensorFlow 2.12.0 compatibility).
+Git: For cloning the repository and managing version control.
+Internet Connection: Required for API calls and model downloads.
