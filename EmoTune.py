@@ -30,12 +30,6 @@ import subprocess
 import cv2
 import mediapipe as mp
 
-
-# Suppress warnings
-os.environ["TF_ENABLE_ONEDNN_OPTS"] = "0"
-warnings.filterwarnings("ignore")
-tf.disable_v2_behavior()
-
 # Configure Gemini API
 genai.configure(api_key="AIzaSyBFAZbDq0cUKULPMTcZfoiJA5WxpbIscRQ")  # Replace with your Gemini API key
 gemini_model = genai.GenerativeModel('gemini-1.5-flash-latest')
