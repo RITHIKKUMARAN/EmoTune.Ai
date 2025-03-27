@@ -27,20 +27,8 @@ from spotipy.oauth2 import SpotifyClientCredentials
 from collections import Counter
 import requests  # Added for smartwatch API calls
 import subprocess
-
-# Ensure OpenCV is installed first
-try:
-    import cv2
-except ImportError:
-    subprocess.run(["pip", "install", "opencv-python-headless"])
-    import cv2
-
-# Now import MediaPipe safely
-try:
-    import mediapipe as mp
-except ImportError:
-    subprocess.run(["pip", "install", "mediapipe"])
-    import mediapipe as mp
+import cv2
+import mediapipe as mp
 
 
 # Suppress warnings
