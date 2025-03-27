@@ -1,0 +1,3 @@
+libpng16-16
+libjpeg-dev
+zlib1g
