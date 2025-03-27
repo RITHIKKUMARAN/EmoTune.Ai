@@ -5,7 +5,7 @@ import numpy as np
 import tensorflow.compat.v1 as tf
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Conv2D, MaxPooling2D, Flatten, Dense
-from transformers import pipeline
+from transformers.pipelines import pipeline
 from audiocraft.models import MusicGen
 import soundfile as sf
 import google.generativeai as genai
