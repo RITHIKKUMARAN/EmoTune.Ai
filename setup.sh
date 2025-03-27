@@ -3,12 +3,16 @@
 pip install --upgrade pip
 # Clear pip cache
 pip cache purge
-# Install opencv-python-headless and opencv-contrib-python-headless first
-pip install opencv-python-headless==4.8.0.74 opencv-contrib-python-headless==4.8.0.74
-# Explicitly uninstall opencv-python and opencv-contrib-python if present
+# Install opencv-python-headless first
+pip install opencv-python-headless==4.8.0.74
+# Explicitly uninstall opencv-python if present
 pip uninstall -y opencv-python opencv-contrib-python || true
 # Test OpenCV import
 python -c "import cv2; print('OpenCV version:', cv2.__version__)" || { echo "OpenCV import failed"; exit 1; }
+# Install mediapipe without dependencies
+pip install mediapipe==0.10.21 --no-deps
+# Install torch CPU version explicitly
+pip install torch==2.1.0 --extra-index-url https://download.pytorch.org/whl/cpu
 # Force reinstall transformers
 pip install --force-reinstall transformers==4.49.0
 # Install remaining requirements
