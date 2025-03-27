@@ -30,8 +30,9 @@ import subprocess
 import cv2
 import mediapipe as mp
 
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 # Configure Gemini API
-genai.configure(api_key="AIzaSyBFAZbDq0cUKULPMTcZfoiJA5WxpbIscRQ")  # Replace with your Gemini API key
+genai.configure(api_key="GEMINI_API_KEY")  # Replace with your Gemini API key
 gemini_model = genai.GenerativeModel('gemini-1.5-flash-latest')
 
 # Debug flag
@@ -68,20 +69,23 @@ with graph.as_default():
             init = tf.global_variables_initializer()
             session.run(init)
 
+YOUTUBE_API_KEY = os.getenv("YOUTUBE_API_KEY")
 # Load other models
 @st.cache_resource
 def load_other_models():
     sentiment_analyzer = pipeline("sentiment-analysis", model="distilbert-base-uncased-finetuned-sst-2-english")
     music_model = MusicGen.get_pretrained("facebook/musicgen-small")
     music_model.set_generation_params(duration=5, top_k=250, top_p=0.9)
-    youtube = build("youtube", "v3", developerKey="AIzaSyAhYOPNE95kznfB9FRMUc-Ll23FJ37lovE")  # Replace with your YouTube API key
+    youtube = build("youtube", "v3", developerKey="YOUTUBE_API_KEY")  # Replace with your YouTube API key
     return sentiment_analyzer, music_model, youtube
 
 sentiment_analyzer, music_model, youtube = load_other_models()
 
+SPOTIFY_CLIENT_ID = os.getenv("SPOTIFY_CLIENT_ID")
+SPOTIFY_CLIENT_SECRET = os.getenv("SPOTIFY_CLIENT_SECRET")
 # Spotify setup
-client_id = "9ff2eceb450a47e4884328752d6a06d7"  # Replace with your Spotify Client ID
-client_secret = "df8f34cc0c034fada7783040f5b71a51"  
+client_id = "SPOTIFY_CLIENT_ID"  # Replace with your Spotify Client ID
+client_secret = "SPOTIFY_CLIENT_SECRET"  
 auth_manager = SpotifyClientCredentials(client_id=client_id, client_secret=client_secret)
 sp = spotipy.Spotify(auth_manager=auth_manager, requests_timeout=10)
 
