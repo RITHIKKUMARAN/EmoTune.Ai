@@ -24,19 +24,24 @@ import backoff
 import matplotlib.pyplot as plt
 import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials
-import mediapipe as mp
 from collections import Counter
 import requests  # Added for smartwatch API calls
 import subprocess
 
+# Ensure OpenCV is installed first
 try:
     import cv2
-    print("✅ OpenCV Installed Successfully")
 except ImportError:
-    print("❌ OpenCV Not Found. Installing...")
     subprocess.run(["pip", "install", "opencv-python-headless"])
+    import cv2
 
-import cv2
+# Now import MediaPipe safely
+try:
+    import mediapipe as mp
+except ImportError:
+    subprocess.run(["pip", "install", "mediapipe"])
+    import mediapipe as mp
+
 
 # Suppress warnings
 os.environ["TF_ENABLE_ONEDNN_OPTS"] = "0"
