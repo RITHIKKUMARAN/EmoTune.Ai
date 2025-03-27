@@ -1,3 +1,6 @@
 libpng16-16
 libjpeg-dev
 zlib1g
+libopenjp2-7
+libtiff5
+libwebp-dev
