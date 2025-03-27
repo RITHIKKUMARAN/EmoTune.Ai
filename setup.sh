@@ -4,7 +4,7 @@ pip install --upgrade pip
 # Clear pip cache
 pip cache purge
 # Install opencv-python-headless first
-pip install opencv-python-headless==4.8.0.74
+pip install opencv-python-headless==4.9.0.80
 # Explicitly uninstall opencv-python if present
 pip uninstall -y opencv-python opencv-contrib-python || true
 # Test OpenCV import
