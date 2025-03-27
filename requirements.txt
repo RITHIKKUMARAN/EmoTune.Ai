@@ -9,7 +9,7 @@ google-api-python-client==2.165.0
 pandas==2.2.3
 scikit-learn==1.6.1
 pillow==10.2.0
-torch==2.1.0
+torch==2.1.0 --extra-index-url https://download.pytorch.org/whl/cpu
 scipy==1.15.2
 matplotlib==3.10.1
 spotipy==2.25.1
@@ -17,6 +17,4 @@ requests==2.32.3
 backoff==2.2.1
 opencv-python-headless==4.8.0.74
 opencv-python!=*
-opencv-contrib-python-headless==4.8.0.74
-opencv-contrib-python!=*
 mediapipe==0.10.21
