@@ -2,7 +2,6 @@ import os
 import json
 import streamlit as st
 import numpy as np
-import cv2
 import tensorflow.compat.v1 as tf
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Conv2D, MaxPooling2D, Flatten, Dense
@@ -28,6 +27,16 @@ from spotipy.oauth2 import SpotifyClientCredentials
 import mediapipe as mp
 from collections import Counter
 import requests  # Added for smartwatch API calls
+import subprocess
+
+try:
+    import cv2
+    print("✅ OpenCV Installed Successfully")
+except ImportError:
+    print("❌ OpenCV Not Found. Installing...")
+    subprocess.run(["pip", "install", "opencv-python-headless"])
+
+import cv2
 
 # Suppress warnings
 os.environ["TF_ENABLE_ONEDNN_OPTS"] = "0"
