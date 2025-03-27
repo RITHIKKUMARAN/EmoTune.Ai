@@ -4,3 +4,7 @@ zlib1g
 libopenjp2-7
 libtiff5
 libwebp-dev
+ffmpeg
+libavcodec-dev
+libavformat-dev
+libswscale-dev
