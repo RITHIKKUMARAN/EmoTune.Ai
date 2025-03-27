@@ -15,6 +15,6 @@ matplotlib==3.10.1
 spotipy==2.25.1
 requests==2.32.3
 backoff==2.2.1
-opencv-python-headless==4.8.0.74
+opencv-python-headless==4.9.0.80
 opencv-python!=*
 mediapipe==0.10.21
